@@ -1,1 +1,1 @@
-# Fruits-recognition
+# Fruit Recognition
