@@ -12,6 +12,6 @@ def predict(image1):
     image = img_to_array(image)
     image = image.reshape((1,85,64,-1))
     image = image/255.0
-    #pred = model.predict_classes(image)
+    pred = model.predict_classes(image)
     return image
 
