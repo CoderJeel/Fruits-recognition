@@ -13,5 +13,5 @@ if uploaded_file is not None:
     st.image(image, caption='Uploaded Image.', use_column_width=True)
     st.write("")
     st.write("Classifying...")
-    label = test(uploaded_file)
+    label = predict(uploaded_file)
     st.write('%s (%.2f%%)' % (label[1], label[2]*100))
