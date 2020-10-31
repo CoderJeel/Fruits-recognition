@@ -1,6 +1,6 @@
 import streamlit as st 
 from PIL import Image
-from Back import predict,test
+from Back import predict
 import io
 
 
