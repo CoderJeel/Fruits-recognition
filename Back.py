@@ -2,6 +2,10 @@ from tensorflow import keras
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
 import tensorflow as tf
+from cv2 import cv2
+import os
+import numpy as np
+from PIL import Image, ImageOps
 
 
 model = tf.keras.models.load_model('/home/jeel/ML projects/Fruit_rec/Model/model_v15.h5')
@@ -14,4 +18,3 @@ def predict(image1):
     image = image/255.0
     pred = model.predict_classes(image)
     return pred
-

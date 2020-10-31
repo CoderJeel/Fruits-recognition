@@ -1,18 +1,17 @@
 import streamlit as st 
 from PIL import Image
-from Back import predict
+from Back import predict,test
 import io
 
 
-st.title("Upload + Classification Example")
+st.title("Fruit Image Classification")
 
-uploaded_file = st.file_uploader("Choose an image...", type="jpeg")
+uploaded_file = st.file_uploader("Choose an image...", type="jpg")
 if uploaded_file is not None:
-    #image = Image.open(io.BytesIO(uploaded_file))
-    Image = uploaded_file.read()
-    print(type(Image))
-    st.image(Image, caption='Uploaded Image.', use_column_width=True)
+    image = Image.open(uploaded_file)
+    print(type(image))
+    st.image(image, caption='Uploaded Image.', use_column_width=True)
     st.write("")
     st.write("Classifying...")
-    label = predict(Image)
+    label = test(uploaded_file)
     st.write('%s (%.2f%%)' % (label[1], label[2]*100))
