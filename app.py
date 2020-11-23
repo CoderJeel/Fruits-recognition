@@ -6,7 +6,7 @@ from cv2 import cv2
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
 
-model = tf.keras.models.load_model('/home/jeel/ML projects/Fruit_rec/Model/model_v15.h5')
+model = tf.keras.models.load_model('/home/jeel/ML projects/Fruits-recognition/Model/model_v15.h5')
 
 categories = pickle.load(open('/home/jeel/ML projects/Fruit_rec/cat.pickle',mode='rb'))
 
